@@ -19,13 +19,16 @@ export class ColorService {
     private toast: ToastService,
   ) { }
 
+  // Subscribes to the data in the store.
+  // Only triggers a workflow to fetch the data and place it in the store
+  // if the data is not already there.
   getColors() {
     let notify = true;
 
     return this.store.select(themeColors).pipe(
       tap(colors => {
         if (colors.length) {
-          if (notify) this.toast.notify('Use Colors from store Cache');
+          if (notify) this.toast.notify('Use Colors from store cache.');
           return;
         }
 
@@ -45,7 +48,7 @@ export class ColorService {
 
   private fetchColors() {
     return this.api.get<Color[]>('colors').pipe(
-      tap(() => this.toast.notify('Fetch Colors from API')),
+      tap(() => this.toast.notify('Fetch colors from API.')),
       tap(themeColors => this.store.dispatch(ColorActions.colorsFetched({ themeColors }))),
     );
   }

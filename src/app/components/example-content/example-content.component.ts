@@ -17,8 +17,6 @@ import { ButtonsComponent } from '../buttons/buttons.component';
       <p><b>Expiring Cache</b> is updated when the store data is stale. Its validity is checked on each new subscription to the store value. It is represented by the second icon.</p>
       <br>
       <p>All routes contain identical content; they exist to showcase the memoization of the data as the app creates new observables.</p>
-      <br>
-      <p><b>The most important/novel part of this example code are the methods IconService#getPeriodicallyRefreshingIcon, IconService#getExpiringIcon, and ColorService#getColors.</b></p>
 
     </div>
     <buttons />
@@ -29,6 +27,8 @@ import { ButtonsComponent } from '../buttons/buttons.component';
       <li><b>Auto Refreshing Cache:</b>&nbsp;Observable tracks validity of data via expiration date value, Automatically fetches new data and updates store.</li>
       <li><b>Expiring Cache:</b>&nbsp;Preflight request on creation of new observable, fetches fresh data if store data is expired.</li>
     </ul>
+    <br>
+    <p><b>The most important/novel part of this example code are the methods: <br> IconService#getPeriodicallyRefreshingIcon <br> IconService#getExpiringIcon <br> ColorService#getColors</b></p>
    `,
   styleUrl: './example-content.component.css'
 })
