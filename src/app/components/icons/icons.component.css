@@ -1,0 +1,181 @@
+:host {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+@media (min-width: 425px) {
+  :host {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (min-width: 576px) {
+  :host {
+    gap: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  :host {
+    gap: 90px;
+  }
+}
+
+
+
+.card {
+  flex-shrink: 0;
+  /* border:2px solid var(--text-color);
+  border-radius: 2px; */
+  padding: 10px;
+}
+
+.card>div {
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid var(--text-color);
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(4px, 4px) scale(1.05) rotate(-2deg);
+  }
+
+  20% {
+    transform: translate(6px, 2px) scale(1.1) rotate(-3deg);
+  }
+
+  30% {
+    transform: translate(6px, -2px) scale(1.15) rotate(-5deg);
+  }
+
+  40% {
+    transform: translate(4px, -4px) scale(1.1) rotate(-3deg);
+  }
+
+  50% {
+    transform: translate(0, 0) scale(1.05) rotate(-2deg);
+  }
+
+  60% {
+    transform: translate(-4px, 4px) scale(1) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(-6px, 2px) scale(1.05) rotate(2deg);
+  }
+
+  80% {
+    transform: translate(-6px, -2px) scale(1.1) rotate(3deg);
+  }
+
+  90% {
+    transform: translate(-4px, -4px) scale(1.05) rotate(2deg);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes rattle {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-4px, -4px) scale(1.05) rotate(2deg);
+  }
+
+  20% {
+    transform: translate(-6px, -2px) scale(1.1) rotate(3deg);
+  }
+
+  30% {
+    transform: translate(-6px, 2px) scale(1.15) rotate(5deg);
+  }
+
+  40% {
+    transform: translate(-4px, 4px) scale(1.1) rotate(3deg);
+  }
+
+  50% {
+    transform: translate(0, 0) scale(1.05) rotate(2deg);
+  }
+
+  60% {
+    transform: translate(4px, -4px) scale(1) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(6px, -2px) scale(1.05) rotate(-2deg);
+  }
+
+  80% {
+    transform: translate(6px, 2px) scale(1.1) rotate(-3deg);
+  }
+
+  90% {
+    transform: translate(4px, 4px) scale(1.05) rotate(-2deg);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}
+
+.card.animate:first-child ng-icon {
+  animation-name: shake;
+  animation-duration: 12s;
+}
+
+.card.animate:nth-child(2) ng-icon {
+  animation-duration: 16s;
+  animation-name: rattle;
+}
+
+ng-icon {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 168px;
+  /* animation-name: shake; */
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+
+@media (min-width: 425px) {
+  ng-icon {
+    font-size: 100px;
+  }
+}
+
+@media (min-width: 576px) {
+  ng-icon {
+    font-size: 168px;
+  }
+}
+
+@media (min-width: 768px) {
+  ng-icon {
+    font-size: 250px;
+  }
+}
+
+label {
+  color: var(--text-color);
+  margin-left: 10px;
+}
