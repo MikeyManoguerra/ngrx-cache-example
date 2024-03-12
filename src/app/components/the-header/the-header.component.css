@@ -25,7 +25,7 @@ ul {
 }
 
 a.active {
-  color: var(--purple);
+  color: var(--light-purple);
 }
 
 a:hover,

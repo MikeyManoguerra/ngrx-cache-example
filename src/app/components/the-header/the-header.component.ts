@@ -42,7 +42,7 @@ import { octMarkGithub } from '@ng-icons/octicons'
           </div>
           <div>|</div>
           <a href="https://github.com/mikeymanoguerra" aria-label="Github">
-            <ng-icon name="octMarkGithub"></ng-icon>
+            <ng-icon name="octMarkGithub" alt="github-link"></ng-icon>
           </a>
         </div>
       </div>

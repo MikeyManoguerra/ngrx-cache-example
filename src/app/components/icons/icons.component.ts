@@ -20,6 +20,7 @@ import { SettingsService } from '../../services/settings.service';
       *ngIf="refreshingIcon$ | async as icon"
       [name]="icon.name"
       [ngStyle]="{ color: currentColor.value }"
+      alt="example-cached-icon"
       ></ng-icon>
       <div>
         <p>Refreshing Cache</p>
@@ -31,6 +32,7 @@ import { SettingsService } from '../../services/settings.service';
       *ngIf="expiringIcon$ | async as icon"
       [name]="icon.name"
       [ngStyle]="{ color: currentColor.value }"
+      alt="example-cached-icon"
       ></ng-icon>
       <div>
         <p>Expiring Cache</p>
